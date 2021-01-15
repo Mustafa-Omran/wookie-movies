@@ -1,0 +1,36 @@
+<section *ngIf="movie" class="p-3">
+    <div class="row m-0 p-0">
+        <div class="col-md-4">
+            <img [src]="movie.poster" [alt]="movie.title">
+        </div>
+
+        <div class="col-md-8 row">
+            <h3 class="col-md-6">
+                <b>{{movie.title}}</b> {{movie.imdb_rating}}
+            </h3>
+
+            <div class="col-md-6">
+                <app-star-rating [rating]="movie.imdb_rating / 2"></app-star-rating>
+            </div>
+
+            <div class="col-md-12">
+                <p>
+                    Year: {{movie.released_on}},Length: {{movie.length}}, Director {{movie.director}}
+                </p>
+            </div>
+
+            <div class="col-md-12">
+                <p>
+                    Cast: {{movie.cast}}
+                </p>
+            </div>
+
+            <div class="col-md-12">
+                <p>
+                    Movie Description: {{movie.overview}}
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>

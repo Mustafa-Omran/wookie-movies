@@ -1,0 +1,22 @@
+<section *ngIf="movies.length > 0">
+    <div class="p-5 m-0" *ngFor="let genre of genres">
+        <h2>
+            {{genre}}
+        </h2>
+
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-12 mb-5" *ngFor="let movie of movies | filter:genre"
+                matTooltip="{{movie.title}}">
+                <div class="card " (click)="navigateToMovieDetails(movie)">
+                    <img class="img-fluid img-back" [src]="movie.poster" [alt]="movie.title">
+                    <img class="img-top" [src]="movie.backdrop" [alt]="movie.title">
+                    <div class="bg-text">
+                        {{movie.title}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<p class="text-center p-5" *ngIf="movies.length == 0">No movies found</p>

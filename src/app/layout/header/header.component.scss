@@ -1,0 +1,40 @@
+:host ::ng-deep {
+    .mat-toolbar-single-row {
+        height: 75px;
+    }
+
+    .mat-form-field-underline {
+        display: none;
+    }
+
+    .mat-form-field-appearance-fill .mat-form-field-flex {
+        margin-top: 10px;
+        border-radius: 50px;
+        padding: 5px;
+        background-color: white;
+        color: black;
+    }
+
+    .mat-form-field-appearance-fill .mat-form-field-infix {
+        padding: 0px;
+    }
+
+    .mat-form-field-infix {
+        padding: 0px;
+        border: none;
+    }
+}
+
+.search {
+    float: right;
+}
+
+.icon {
+    color: #3f51b5;
+    margin: 5px;
+}
+
+.logo a {
+    font-size: larger;
+    color: white;
+}
